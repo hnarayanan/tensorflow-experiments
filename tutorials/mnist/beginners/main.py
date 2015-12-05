@@ -4,7 +4,7 @@ import input_data
 
 NUM_CORES = 8
 
-mnist = input_data.read_data_sets("../../data/mnist/", one_hot=True)
+mnist = input_data.read_data_sets("../../../data/mnist/", one_hot=True)
 print mnist.train.images
 print mnist.train.labels
 print mnist.test.images
