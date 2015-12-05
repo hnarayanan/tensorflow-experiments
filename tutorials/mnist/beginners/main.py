@@ -2,8 +2,6 @@ import tensorflow as tf
 
 import input_data
 
-NUM_CORES = 8
-
 mnist = input_data.read_data_sets("../../../data/mnist/", one_hot=True)
 print mnist.train.images
 print mnist.train.labels
@@ -23,12 +21,7 @@ train_step = tf.train.GradientDescentOptimizer(0.01).minimize(cross_entropy)
 
 init = tf.initialize_all_variables()
 
-sess = tf.Session(
-    config=tf.ConfigProto(
-        inter_op_parallelism_threads=NUM_CORES,
-        intra_op_parallelism_threads=NUM_CORES
-    )
-)
+sess = tf.Session()
 sess.run(init)
 
 
