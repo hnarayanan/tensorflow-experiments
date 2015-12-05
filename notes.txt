@@ -20,3 +20,12 @@ sess = tf.Session(
         intra_op_parallelism_threads=NUM_CORES
     )
 )
+
+4. Test the installation
+
+   python -m tensorflow.models.image.mnist.convolutional
+
+
+Machine Learning Tips
+
+- If you want to assign probabilities to an object being one of several different things, softmax is the thing to do.
